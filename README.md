@@ -35,17 +35,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-
+  https://www.uber.com/nl/nl/ 
+  https://www.uber.com/nl/nl/about
+  
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Homepage Uber 
+  <img src="readme-images/homepage-uber.png" width="375px" alt="Gehele screenshot van de homepagina van Uber">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  Overons pagina Uber  
+  <img src="readme-images/overons-pagina-uber.png" width="375px" alt="Gehele screenshot van de overons pagina Uber">
 </details>
-
 
 
 ## Toegankelijkheidstest 1/2 (week 1)
