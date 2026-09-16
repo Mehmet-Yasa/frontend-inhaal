@@ -36,14 +36,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   https://www.uber.com/nl/nl/ 
+
   https://www.uber.com/nl/nl/about
   
   #### Screenshot(s) van de eerste pagina (small screen): 
+
   Homepage Uber 
+
   <img src="readme-images/homepage-uber.png" width="375px" alt="Gehele screenshot van de homepagina van Uber">
 
   #### Screenshot(s) van de tweede pagina (small screen):
+
   Overons pagina Uber  
+  
   <img src="readme-images/overons-pagina-uber.png" width="375px" alt="Gehele screenshot van de overons pagina Uber">
 </details>
 
@@ -108,8 +113,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - ...
 
 </details>
-
-
 
 
 
