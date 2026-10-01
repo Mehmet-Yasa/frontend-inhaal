@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="nl">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<title>Howdy FED2526</title>
-	
+
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -16,39 +16,267 @@
 
 	<header>
 		<nav>
+			<a href="index.html">Uber</a>
 			<a href="#">Inloggen</a>
 			<a href="#">Aanmelden</a>
+			<button type="button" aria-label="Menu">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M2 6h20v3H2V6Z" fill="currentColor"></path>
+					<path d="M2 15h20v3H2v-3Z" fill="currentColor"></path>
+				</svg>
+			</button>
 		</nav>
 	</header>
 
 	<main>
+		<article>
+			<p>
+				<svg viewBox="0 0 14 14" aria-hidden="true">
+					<path
+						d="M10.9081 2.21665C8.74974 0.0583171 5.24974 0.0583171 3.09141 2.21665C0.933073 4.37498 0.933073 7.93332 3.09141 10.0917L6.99974 14L10.9081 10.0333C13.0664 7.93332 13.0664 4.37498 10.9081 2.21665ZM6.99974 7.29165C6.35807 7.29165 5.83307 6.76665 5.83307 6.12498C5.83307 5.48332 6.35807 4.95832 6.99974 4.95832C7.64141 4.95832 8.16641 5.48332 8.16641 6.12498C8.16641 6.76665 7.64141 7.29165 6.99974 7.29165Z"
+						fill="currentColor"></path>
+				</svg>
+				Amsterdam, NL
+				<button type="button">Stad wijzigen</button>
+			</p>
 			<h1>Met Uber kom je overal</h1>
 			<form>
-					<fieldset>
-							<legend>Route</legend>
+				<label for="ophaallocatie">Ophaallocatie</label>
+				<input type="text" id="ophaallocatie" name="ophaallocatie">
+				<button type="button" aria-label="Gebruik mijn locatie"></button>
 
-							<label for="ophaallocatie">Ophaallocatie</label>
-            				<input type="text" id="ophaallocatie" name="ophaallocatie">
-            				<button type="button" aria-label="Gebruik mijn locatie"></button>
+				<label for="bezorglocatie">Bezorglocatie</label>
+				<input type="text" id="bezorglocatie" name="bezorglocatie">
 
-            				<label for="bezorglocatie">Bezorglocatie</label>
-            				<input type="text" id="bezorglocatie" name="bezorglocatie">
-					</fieldset>
-
-					<button type="submit">Raadpleeg de prijzen</button>
+				<button type="submit">Raadpleeg de prijzen</button>
 			</form>
-
 			<a href="#">Log in om je meest recente activiteit te bekijken</a>
+		</article>
 
-			<section>
-					<article>
-							<h2>Ontdek wat je kunt doen via uber</h2>
-					</article>
-			</section>
+		<article>
+			<h2>Ontdek wat je kunt doen via uber</h2>
+			<ul>
+				<li>
+					<a href="#">
+						<img src="images/ritmaken.png" alt="Rit maken">
+						<p>Rit maken</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="images/reserveren.png" alt="Reserveren">
+						<p>Reserveren</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="images/huurautos.png" alt="Huurauto's">
+						<p>Huurauto's</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="images/intercity.png" alt="Intercity">
+						<p>Intercity</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="images/trek.png" alt="Trek?">
+						<p>Trek?</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="images/boodschap.png" alt="Boodschappen">
+						<p>Boodschappen</p>
+					</a>
+				</li>
+			</ul>
+		</article>
+
+
+		<article>
+			<h2>Log in om je accountgegevens te bekijken</h2>
+			<p>Bekijk eerdere ritten, suggesties op maat, informatiebronnen en nog veel meer.</p>
+			<a href="#">Inloggen op je account</a>
+			<a href="#">Een account aanmaken</a>
+			<img src="images/man-en-vrouw.svg" alt="Koppel die samen in de auto zitten">
+		</article>
+
+		<article>
+			<h2>Plannen voor later</h2>
+			<button type="button">Uber Reserve</button>
+			<button type="button">Huren</button>
+			<h3>Plan je rit met Uber Reserve</h3>
+			<h4>Datum en tijd kiezen</h4>
+
+			<form>
+				<label for="datum">Date</label>
+				<input type="date" id="datum">
+				<label for="tijd">Time</label>
+				<input type="time" id="tijd">
+				<button type="button">Volgende</button>
+			</form>
+		</article>
+
+
+
+		<article>
+			<h2>Voordelen</h2>
+			<img src="images/kalender.svg" alt="PNG van een kalender">
+			<p>Kies je exacte ophaaltijd tot 90 dagen van tevoren.</p>
+			<img src="images/klok.svg" alt="PNG van een klok">
+			<p>Inclusief extra wachttijd voor je rit.</p>
+			<img src="images/pinpas.svg" alt="SVG van een Pinpas">
+			<p>Annuleer zonder kosten tot 60 minuten van tevoren.</p>
+			<a href="#">Bekijk de voorwaarden</a>
+		</article>
+
+
+
+		<article>
+			<h2>Ben je je volgende uitje aan het plannen?</h2>
+			<p>Of je nu een weekendje weggaat of een internationale bestemming bezoekt, wij staan voor je klaar.
+				Ontdek vervoersmogelijkheden, bezienswaardigheden en meer met onze nieuwe City Hub.</p>
+			<button type="button">Amsterdam</button>
+			<img src="images/vliegtuigmetuitzicht.png" alt="PNG van een vliegtuig met uitzicht op de stad">
+		</article>
+
+
+
+		<article>
+			<h2>Rijd wanneer je wilt, maak zoveel omzet als je wilt</h2>
+			<p>Maak omzet volgens je eigen planning met bezorgingen of ritten, of beide. Gebruik je eigen auto of
+				een huurauto via Uber.</p>
+			<a href="#">Aan de slag</a>
+			<a href="#">Heb je al een account? Inloggen</a>
+			<img src="images/taxiinauto.png" alt="PNG van een taxi in een auto">
+		</article>
+
+
+		<article>
+			<h2>De Uber die u kent, opnieuw ontworpen voor bedrijven</h2>
+			<p>Uber for Business is een wereldwijd platform voor het beheren van ritten, maaltijden en lokale
+				bezorgingen voor grote en kleine bedrijven..</p>
+			<a href="#">Aan de slag</a>
+			<a href="#">Bekijk onze oplossingen</a>
+			<img src="images/aankomst.png" alt="PNG van een passagier in een auto die aankomt bij een bestemming">
+		</article>
+
+		<article>
+			<h2>Het is makkelijker in de apps</h2>
+			<h3>Download de Uber-app</h3>
+			<img src="images/uber.svg" alt="SVG van het Uber logo">
+		</article>
+
+		<article>
+			<h3>Download de Uber Partner-app</h3>
+			<img src="images/ubermetpijl.svg" alt="SVG van het Uber logo met een pijl ernaast">
+		</article>
 
 	</main>
 
+	<footer>
+
+		<a href="#">Uber</a>
+		<a href="#">Naar het Help Center</a>
+		<a href="#">Hoe werken de apps en websites van Uber en Uber Eats?</a>
+
+		<h2>Bedrijf</h2>
+		<ul>
+			<li><a href="#">Over Uber</a></li>
+			<li><a href="#">Wat wij bieden</a></li>
+			<li><a href="#">Newsroom</a></li>
+			<li><a href="#">Investeerders</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Werken bij Uber</a></li>
+			<li><a href="#">Uber One</a></li>
+			<li><a href="#">Bedrijfsinformatie</a></li>
+		</ul>
+
+		<h2>Producten</h2>
+		<ul>
+			<li><a href="#">Een rit maken</a></li>
+			<li><a href="#">Rijden</a></li>
+			<li><a href="#">Bezorgen</a></li>
+			<li><a href="#">Eten</a></li>
+			<li><a href="#">Uber for Business</a></li>
+			<li><a href="#">Uber Freight</a></li>
+			<li><a href="#">Cadeaubonnen</a></li>
+			<li><a href="#">Uber Health</a></li>
+			<li><a href="#">Winkeliers</a></li>
+		</ul>
+
+		<h2>Wereldburgerschap</h2>
+		<ul>
+			<li><a href="#">Veiligheid</a></li>
+			<li><a href="#">Duurzaamheid</a></li>
+		</ul>
+
+		<h2>Reizen</h2>
+		<ul>
+			<li><a href="#">Reserveren</a></li>
+			<li><a href="#">Luchthavens</a></li>
+			<li><a href="#">Hotels</a></li>
+			<li><a href="#">Steden</a></li>
+		</ul>
+
+		<ul>
+			<li>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path
+						d="M21.37 1H2.62C1.73 1 1 1.71 1 2.58v18.83c0 .88.73 1.59 1.62 1.59h18.75c.9 0 1.63-.71 1.63-1.59V2.58C23 1.71 22.27 1 21.37 1ZM7.53 19.75H4.26V9.25h3.27v10.5ZM5.89 7.81C4.85 7.81 4 6.960 4 5.92s.84-1.89 1.89-1.89c1.04 0 1.89.85 1.89 1.89.01 1.04-.84 1.89-1.89 1.89Zm13.86 11.94h-3.26v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7v5.19H9.57V9.26h3.13v1.43h.04c.44-.83 1.5-1.7 3.09-1.7 3.3 0 3.91 2.17 3.91 5v5.76h.01Z"
+						fill="currentColor"></path>
+				</svg>
+			</li>
+
+			<li>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path
+						d="M23 12s0-3.85-.46-5.58c-.25-.95-1-1.7-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46c-.95.25-1.69 1.01-1.94 1.96C1 8.15 1 12 1 12s.04 3.85.5 5.58c.25.95 1 1.7 1.95 1.96 1.71.46 8.59.46 8.59.46s6.88 0 8.6-.46c.95-.25 1.69-1.01 1.94-1.96.46-1.73.42-5.58.42-5.58Zm-13 3.27V8.73L15.5 12 10 15.27Z"
+						fill="currentColor"></path>
+				</svg>
+			</li>
+
+			<li>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<g fill="currentColor">
+						<path
+							d="M21.15 2.85C19.05.74 16.23 1 12 1 8.04 1 5 .69 2.85 2.85.74 4.95 1 7.77 1 12c0 3.95-.31 7 1.85 9.15C4.95 23.26 7.77 23 12 23c3.96 0 7 .31 9.15-1.85C23.25 19.05 23 16.23 23 12c0-4.31.24-7.07-1.85-9.15Zm-1.4 16.9c-1.37 1.37-3.18 1.27-7.75 1.27-4.29 0-6.34.15-7.75-1.27-1.44-1.44-1.27-3.51-1.27-7.75 0-4.23-.15-6.330 1.27-7.75C5.66 2.84 7.6 2.98 12 2.98c4.23 0 6.33-.15 7.75 1.27 1.38 1.38 1.27 3.22 1.27 7.75 0 4.24.15 6.34-1.27 7.75Z">
+						</path>
+						<path
+							d="M12 6.35a5.65 5.65 0 1 0 .001 11.301A5.65 5.65 0 0 0 12 6.35Zm0 9.32c-2.02 0-3.67-1.64-3.67-3.67 0-2.030 1.64-3.67 3.67-3.67 2.03 0 3.67 1.64 3.67 3.67 0 2.02-1.65 3.67-3.67 3.67ZM17.87 4.81c-.73 0-1.32.59-1.32 1.32 0 .73.59 1.32 1.32 1.32.73 0 1.32-.59 1.32-1.32 0-.73-.59-1.32-1.32-1.32Z">
+						</path>
+					</g>
+				</svg>
+			</li>
+			<li>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path
+						d="M14.094 10.317 22.28 1H20.34l-7.11 8.088L7.557 1H1.01l8.583 12.231L1.01 23H2.95l7.503-8.543L16.446 23h6.546M3.649 2.432h2.978L20.34 21.639h-2.98"
+						fill="currentColor"></path>
+				</svg>
+			</li>
+		</ul>
+
+
+		<button type="button">Nederlands</button>
+		<button type="button">Amsterdam</button>
+
+		<img src="images/googleplay.svg" alt="SVG van het Google Play logo">
+		<img src="images/appstore.svg" alt="SVG van het App Store logo">
+
+		<p>© 2026 Uber Technologies Inc.</p>
+
+
+	</footer>
 
 </body>
-	
+
 </html>

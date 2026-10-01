@@ -1,3 +1,24 @@
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: "Uber Move Text";
+	src: url("../fonts/UberMoveText-Regular.woff2") format("woff2");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Uber Move Text";
+	src: url("../fonts/UberMoveText-Medium.woff2") format("woff2");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Uber Move";
+	src: url("../fonts/UberMove-Bold.woff2") format("woff2");
+	font-weight: 700;
+}
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -5,27 +26,94 @@
   box-sizing:border-box;  
 }
 
-
-
-
-
+img {
+	max-width: 100%;
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:#000;
+	--color-background:#fff;
+	--color-surface:#f3f3f3;
+	--color-link:#1a1a1a;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
 /* jouw code */
+body {
+	margin: 0;
+	font-family: "Uber Move Text", system-ui, sans-serif;
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
 
+header {
+	background-color: var(--color-text);
+}
+
+header a {
+	color: var(--color-background);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+nav {
+	display: flex;
+	gap: 1rem;
+	padding: 1.5rem;
+	align-items: center;
+}
+
+nav a:first-child {
+	margin-right: auto;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+nav a:last-of-type {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+}
+
+nav button {
+	background-color: transparent;
+	border: none;
+	color: var(--color-background);
+}
+
+nav svg {
+	width: 1.5rem;
+}
+
+main {
+	padding: 1.5rem;
+}
+
+h1, h2 {
+	font-family: "Uber Move", system-ui, sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2.25rem;
+	line-height: 1.2;
+}
+
+main p button {
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+	font: inherit;
+}
+
+main p svg {
+	width: 1rem;
+}
