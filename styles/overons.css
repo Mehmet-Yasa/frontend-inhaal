@@ -101,3 +101,7 @@ article:nth-of-type(10) img {
 body.donker-thema article:nth-of-type(9) li img {
 	filter: invert(1);
 }
+
+body.donker-thema article:nth-of-type(5) img {
+	filter: none;
+}

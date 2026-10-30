@@ -71,6 +71,10 @@ body {
 	background-color: var(--color-background);
 }
 
+html.grote-tekst {
+	font-size: 125%;
+}
+
 body.donker-thema article:nth-of-type(5) img {
 	filter: invert(1);
 }
@@ -208,17 +212,47 @@ input:focus {
 	outline: 0.15rem solid var(--color-text);
 }
 
-a:focus,
-button:focus {
+form div:has(input:focus) {
+	outline: 0.15rem solid var(--color-text);
+}
+
+form div input:focus {
+	outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
 	outline: 0.15rem solid var(--color-text);
 	outline-offset: 0.2rem;
 }
 
-header a:focus,
-header button:focus,
-footer a:focus,
-footer button:focus {
+header a:focus-visible,
+header button:focus-visible,
+footer a:focus-visible,
+footer button:focus-visible {
 	outline-color: var(--color-background);
+}
+
+button {
+	cursor: pointer;
+}
+
+a:hover,
+button:hover {
+	opacity: 0.8;
+}
+
+a:active,
+button:active {
+	opacity: 0.6;
+}
+
+article a:hover {
+	text-decoration-color: var(--color-text);
+}
+
+* {
+	transition: background-color 0.3s, color 0.3s, opacity 0.2s;
 }
 
 a {
@@ -399,12 +433,17 @@ footer ul {
 
 footer svg {
 	width: 1rem;
+	transition: width 0.2s;
 }
 
 footer ul:nth-of-type(5) {
 	flex-direction: row;
 	gap: 2rem;
 	margin-top: 1.5rem;
+}
+
+footer ul:nth-of-type(5) a:hover svg {
+	width: 1.25rem;
 }
 
 footer button {
@@ -443,6 +482,18 @@ footer button:first-of-type {
 	margin-top: 1rem;
 }
 
-footer button:last-of-type {
+footer button:nth-of-type(2) {
 	margin-top: -0.75rem;
+}
+
+nav button:first-of-type svg:last-child {
+	display: none;
+}
+
+body.donker-thema nav button:first-of-type svg:first-child {
+	display: none;
+}
+
+body.donker-thema nav button:first-of-type svg:last-child {
+	display: block;
 }
