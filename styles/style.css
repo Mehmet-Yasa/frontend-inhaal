@@ -214,6 +214,13 @@ button:focus {
 	outline-offset: 0.2rem;
 }
 
+header a:focus,
+header button:focus,
+footer a:focus,
+footer button:focus {
+	outline-color: var(--color-background);
+}
+
 a {
 	color: var(--color-text);
 }
