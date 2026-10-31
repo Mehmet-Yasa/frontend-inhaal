@@ -75,8 +75,58 @@ html.grote-tekst {
 	font-size: 125%;
 }
 
-body.donker-thema article:nth-of-type(5) img {
-	filter: invert(1);
+a {
+	color: var(--color-text);
+}
+
+button {
+	cursor: pointer;
+}
+
+h1, h2, h3 {
+	font-family: "Uber Move", system-ui, sans-serif;
+	font-weight: 700;
+	margin: 0;
+}
+
+h1 {
+	font-size: 2.25rem;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h4 {
+	margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 0.15rem solid var(--color-text);
+	outline-offset: 0.2rem;
+}
+
+header a:focus-visible,
+header button:focus-visible,
+footer a:focus-visible,
+footer button:focus-visible {
+	outline-color: var(--color-background);
+}
+
+a:hover,
+button:hover {
+	opacity: 0.8;
+}
+
+a:active,
+button:active {
+	opacity: 0.6;
+}
+
+* {
+	transition: background-color 0.3s, color 0.3s, opacity 0.2s;
 }
 
 header {
@@ -119,30 +169,23 @@ nav svg {
 	width: 1.5rem;
 }
 
+nav button:first-of-type svg:last-child {
+	display: none;
+}
+
+body.donker-thema nav button:first-of-type svg:first-child {
+	display: none;
+}
+
+body.donker-thema nav button:first-of-type svg:last-child {
+	display: block;
+}
+
 main {
 	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
-}
-
-h1, h2, h3 {
-	font-family: "Uber Move", system-ui, sans-serif;
-	font-weight: 700;
-	margin: 0;
-}
-
-h1 {
-	font-size: 2.25rem;
-	line-height: 1.2;
-}
-
-h2 {
-	font-size: 2rem;
-}
-
-h4 {
-	margin: 0;
 }
 
 main p button {
@@ -171,6 +214,10 @@ input {
 	color: var(--color-text);
 }
 
+input:focus {
+	outline: 0.15rem solid var(--color-text);
+}
+
 button[type="submit"]{
 	background-color: var(--color-text);
 	color: var(--color-background);
@@ -180,17 +227,6 @@ button[type="submit"]{
 	font: inherit;
 	align-self: flex-start;
 	margin-top: 0.75rem;
-}
-
-form div button{
-	background-color: transparent;
-	border: none;
-	color: var(--color-text);
-}
-
-form svg {
-	width: 1rem;
-	flex-shrink: 0;
 }
 
 form div {
@@ -208,8 +244,15 @@ form div input {
 
 }
 
-input:focus {
-	outline: 0.15rem solid var(--color-text);
+form div button{
+	background-color: transparent;
+	border: none;
+	color: var(--color-text);
+}
+
+form svg {
+	width: 1rem;
+	flex-shrink: 0;
 }
 
 form div:has(input:focus) {
@@ -220,54 +263,23 @@ form div input:focus {
 	outline: none;
 }
 
-a:focus-visible,
-button:focus-visible {
-	outline: 0.15rem solid var(--color-text);
-	outline-offset: 0.2rem;
-}
-
-header a:focus-visible,
-header button:focus-visible,
-footer a:focus-visible,
-footer button:focus-visible {
-	outline-color: var(--color-background);
-}
-
-button {
-	cursor: pointer;
-}
-
-a:hover,
-button:hover {
-	opacity: 0.8;
-}
-
-a:active,
-button:active {
-	opacity: 0.6;
-}
-
-article a:hover {
-	text-decoration-color: var(--color-text);
-}
-
-* {
-	transition: background-color 0.3s, color 0.3s, opacity 0.2s;
-}
-
-a {
-	color: var(--color-text);
-}
-
 article {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 }
 
+article p {
+	margin: 0;
+}
+
 article a {
 	text-decoration-color: var(--color-border);
 	text-underline-offset: 0.5rem;
+}
+
+article a:hover {
+	text-decoration-color: var(--color-text);
 }
 
 article ul {
@@ -338,16 +350,16 @@ article:nth-of-type(4) button[type="button"]:first-of-type {
 	color: var(--color-background);
 }
 
-article p {
-	margin: 0;
+article:nth-of-type(4) button[type="submit"] {
+	align-self: stretch;
 }
 
 article:nth-of-type(5) img {
 	width: 1.5rem;
 }
 
-article:nth-of-type(4) button[type="submit"] {
-	align-self: stretch;
+body.donker-thema article:nth-of-type(5) img {
+	filter: invert(1);
 }
 
 article:nth-of-type(6) button {
@@ -459,6 +471,14 @@ footer button {
 	font-weight: 500;
 }
 
+footer button:first-of-type {
+	margin-top: 1rem;
+}
+
+footer button:nth-of-type(2) {
+	margin-top: -0.75rem;
+}
+
 footer ul:nth-of-type(6) {
 	flex-direction: row;
 	gap: 0.75rem;
@@ -476,24 +496,4 @@ footer ul:nth-of-type(7) {
 	flex-direction: row;
 	gap: 1rem;
 	font-size: 0.75rem;
-}
-
-footer button:first-of-type {
-	margin-top: 1rem;
-}
-
-footer button:nth-of-type(2) {
-	margin-top: -0.75rem;
-}
-
-nav button:first-of-type svg:last-child {
-	display: none;
-}
-
-body.donker-thema nav button:first-of-type svg:first-child {
-	display: none;
-}
-
-body.donker-thema nav button:first-of-type svg:last-child {
-	display: block;
 }
