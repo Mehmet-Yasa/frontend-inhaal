@@ -61,7 +61,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
-  ***Ging goed:***
+  **Ging goed:**
   - Elke pagina heeft een unieke titel
   - De focusvolgorde met het toetsenbord klopt met de layout
   - Koppen worden in een logische volgorde gebruikt, zonder niveaus over te slaan
@@ -80,7 +80,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Dit ga ik in mijn eigen site beter doen:
 
-  - Maar één h1 per pagina.
+  - Maar een h1 per pagina.
   - Een zichtbare focus-stijl, zodat je met het toetsenbord altijd ziet waar je bent.
 </details>
 
