@@ -135,27 +135,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Mijn HTML van beide pagina's was helemaal af.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  - Mijn HTML laten zien
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
+  - Ik moest meer articles gebruiken, in plaats van sections met articles erin.
+  - Ik moest vaker ul en li gebruiken, omdat ik bij sommige elementen de verkeerde keuze had gemaakt.
+  
+  - Deze feedback heb ik daarna toegepast: Mijn pagina's bestaan nu uit articles, en ik gebruik ul en li voor lijstjes. 
 </details>
 
 
@@ -172,39 +165,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
-
-
 ## Voortgang 3 (week 4)
 
 <details>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  De homepage was af, inclusief de footer. Ik was bezig met het stylen van de Over ons-pagina.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  
+  - Geen meeting. Dit was een online inloopmoment waar je kon inbellen als je vragen had. Ik heb dit moment niet gebruikt, omdat ik de tijd nodig had om aan mijn website te werken.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
+  - Geen verslag, omdat ik het inloopmoment niet heb gebruikt. 
 </details>
-
-
-
 
 
 ## Eindgesprek (week 5)
@@ -213,23 +192,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/homepage-metlicht-thema.png" width="375px" alt="Mijn homepage in het lichte thema">
+  <img src="readme-images/mijnoverons.png" width="375px" alt="Mijn over ons pagina">
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
+  - Elementen selecteren met CSS-selectors zoals nth-of-type, in plaats van classes.
+  - Met flexbox dingen naast of onder elkaar zetten.
+  - Een thema-knop met querySelector, addEventListener en classList. Het maantje wordt een zonnetje.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  <img src="readme-images/homepage-donkerethema.png" width="375px" alt="Mijn homepage in het donkere thema">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+  - Uber had het blok Plannen voor later van de site gehaald, dus ik heb het zelf vormgegeven in de huisstijl.
+  - Sommige knoppen doen nog niks als je erop klikt, zoals het menu, Uber Reserve, Huren en Amsterdam.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/plannenblok.png" width="375px" alt="Het blok Plannen voor later, zelf vormgegeven">
 </details>
-
-
-
 
 
 ## Bronnenlijst
