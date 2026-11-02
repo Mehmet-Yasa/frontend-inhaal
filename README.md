@@ -92,13 +92,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/breakdownschets2paginas.png" width="375px" alt="breakdown van de hele paginas">
+  <img src="readme-images/breakdownschets2paginas.png" width="800px" alt="breakdown van de hele paginas">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dynamisch1.png" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dynamisch1.png" width="375px" alt="screenshot van een dynamisch deel (nav)">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dynamisch2.png" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/dynamisch2.png" width="375px" alt="screenshot van de kalender die opent bij datum kiezen">
 </details>
 
 
@@ -161,6 +161,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  **Verbeterd ten opzichte van Uber:**
+  - Elke pagina heeft maar een h1.
+  - Het html-element heeft lang="nl".
+  - Er is een zichtbare focus-stijl als je met Tab door de pagina gaat.
+  
+  **Nog niet goed:**
+  - Niet alle decoratieve afbeeldingen hebben een lege alt.
+  - Mijn animaties gaan nog niet uit bij prefers-reduced-motion.
+
 </details>
 
 
@@ -200,6 +209,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Elementen selecteren met CSS-selectors zoals nth-of-type, in plaats van classes.
   - Met flexbox dingen naast of onder elkaar zetten.
   - Een thema-knop met querySelector, addEventListener en classList. Het maantje wordt een zonnetje.
+  - Surfacec plane: states van controls, animaties, SVG stylen, :has() en lettergrootte.
 
 
   <img src="readme-images/homepage-donkerethema.png" width="375px" alt="Mijn homepage in het donkere thema">
@@ -208,7 +218,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
   - Uber had het blok Plannen voor later van de site gehaald, dus ik heb het zelf vormgegeven in de huisstijl.
-  - Sommige knoppen doen nog niks als je erop klikt, zoals het menu, Uber Reserve, Huren en Amsterdam.
+  - Sommige knoppen doen nog niks als je erop klikt, zoals Uber Reserve, Huren en Amsterdam.
 
   <img src="readme-images/plannenblok.png" width="375px" alt="Het blok Plannen voor later, zelf vormgegeven">
 </details>
@@ -219,12 +229,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
+**Uber**
+  1. Teksten, foto's en illustraties. 
+  2. SVG iconen (menu, locatie, social media en wereldbol) gekopieerd via inspecteren op uber.com
+  3. Fonts Uber Move en Uber Move Text, gedownload via Inspecteren > Network op uber.com
 
-  1. bron 1
-  2. bron 2
-  3. ...
+**Websites die ik heb gebruikt**
+  4. MDN, :has(): https://developer.mozilla.org/en-US/docs/Web/CSS/:has
+  5. MDN, :focus-visible: https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+  6. MDN, @font-face: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+  7. MDN, classList: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+  8. MDN, addEventListener: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+  9. W3Schools, Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
+  10. W3Schools, :nth-of-type: https://www.w3schools.com/cssref/sel_nth-of-type.php
+
+**AI**
+  11. Claude (AI): uitleg en hulp bij het inladen van de fonts met @font-face
+  12. Claude (AI): uitleg en hulp bij de CSS van de header, formulieren, kaartjes, de knoppen bij "Plannen voor later" en de footer
+  13. Claude (AI): uitleg en hulp bij de Over ons-pagina (foto's met tekst erop en overons.css)
+  14. Claude (AI): uitleg en hulp bij het donker thema en de JavaScript van de thema-knop en "Tekst groter"
+  15. Claude (AI): uitleg en hulp bij de surface plane (:focus-visible, hover, transition, :has())
+  16. Claude (AI): advies over toegankelijkheid (alt-teksten, aria-label en focus-stijl)
+  17. Claude (AI): de SVG-code voor de maan en de zon (thema knop), de pijl (app kaartjes bij Het is makkelijker in de apps) en het pijltje naar beneden (Amsterdam knop) en het kruisje (menu knop)
+
+  **Codepen / les**
+  18. FED Oefening JS 3-stap 2 - Hamburger menu: https://codepen.io/shooft/pen/qEOpvZK
+  19. Claude (AI): uitleg en hulp bij het inpassen van het hamburgermenu in mijn site
+
 
 </details>

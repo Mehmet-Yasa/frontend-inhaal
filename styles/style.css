@@ -1,18 +1,25 @@
 /*********/
 /* FONTS */
 /*********/
+
+/* Fonts van Uber: Uber Move en Uber Move Text */
+/* Bron: Claude (AI), uitleg en hulp. Uitleg @font-face: MDN */
+
+/* Laad het gewone font (dikte 400) uit de map fonts */
 @font-face {
 	font-family: "Uber Move Text";
 	src: url("../fonts/UberMoveText-Regular.woff2") format("woff2");
 	font-weight: 400;
 }
 
+/* Laad het iets dikkere font (dikte 500) uit de map fonts */
 @font-face {
 	font-family: "Uber Move Text";
 	src: url("../fonts/UberMoveText-Medium.woff2") format("woff2");
 	font-weight: 500;
 }
 
+/* Laad het dikke font voor de koppen (dikte 700) uit de map fonts */
 @font-face {
 	font-family: "Uber Move";
 	src: url("../fonts/UberMove-Bold.woff2") format("woff2");
@@ -26,6 +33,7 @@
   box-sizing:border-box;  
 }
 
+/* Plaatjes worden nooit breder dan hun ruimte */
 img {
 	max-width: 100%;
 }
@@ -33,17 +41,19 @@ img {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* Bron: Claude (AI), uitleg en hulp */
+
+/* Kleuren van het lichte thema */
 :root {
-	/* startje */
 	--color-text:#000;
 	--color-background:#fff;
 	--color-surface:#f3f3f3;
 	--color-border: #e2e2e2;
 	--color-surface-light: #f6f6f6;
 	--color-on-image: #fff;
-
 }
 
+/* Kleuren van het donker thema, JavaScript zet de class "donker-thema" op de body */
 body.donker-thema {
 	--color-text: #fff;
 	--color-background: #000;
@@ -53,6 +63,7 @@ body.donker-thema {
 	color-scheme: dark;
 }
 
+/* Zorg dat de header en footer zwart blijven in het donker thema */
 body.donker-thema header,
 body.donker-thema footer {
 	--color-text: #000;
@@ -63,7 +74,10 @@ body.donker-thema footer {
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+/* Bron: Claude (AI), uitleg en hulp bij de CSS hieronder */
+/* Uitleg flexbox en nth-of-type: W3Schools */
+
+/* Geef de pagina het Uber-font, de tekstkleur en de achtergrondkleur */
 body {
 	margin: 0;
 	font-family: "Uber Move Text", system-ui, sans-serif;
@@ -71,43 +85,53 @@ body {
 	background-color: var(--color-background);
 }
 
+/* Maak alle tekst 25% groter als JavaScript de class "grote-tekst" op html zet */
 html.grote-tekst {
 	font-size: 125%;
 }
 
+/* Geef links dezelfde kleur als de tekst */
 a {
 	color: var(--color-text);
 }
 
+/* Laat een handje zien als je over een knop gaat */
 button {
 	cursor: pointer;
 }
 
+/* Geef de koppen het dikke Uber-font */
 h1, h2, h3 {
 	font-family: "Uber Move", system-ui, sans-serif;
 	font-weight: 700;
 	margin: 0;
 }
 
+/* Maak de h1 het grootst */
 h1 {
 	font-size: 2.25rem;
 	line-height: 1.2;
 }
 
+/* Maak de h2 iets kleiner dan de h1 */
 h2 {
 	font-size: 2rem;
 }
 
+/* Haal de ruimte om de h4 weg */
 h4 {
 	margin: 0;
 }
 
+/* Laat een rand zien om links en knoppen als je met Tab door de pagina gaat */
+/* Uitleg :focus-visible: MDN */
 a:focus-visible,
 button:focus-visible {
 	outline: 0.15rem solid var(--color-text);
 	outline-offset: 0.2rem;
 }
 
+/* Maak die rand wit in de zwarte header en footer, anders zie je hem niet */
 header a:focus-visible,
 header button:focus-visible,
 footer a:focus-visible,
@@ -115,72 +139,143 @@ footer button:focus-visible {
 	outline-color: var(--color-background);
 }
 
+/* Maak links en knoppen iets lichter als je erover gaat */
 a:hover,
 button:hover {
 	opacity: 0.8;
 }
 
+/* Maak links en knoppen nog iets lichter als je erop drukt */
 a:active,
 button:active {
 	opacity: 0.6;
 }
 
+/* Laat kleuren zacht veranderen in plaats van in een keer */
 * {
 	transition: background-color 0.3s, color 0.3s, opacity 0.2s;
 }
 
+/* Maak de header een zwarte balk */
 header {
 	background-color: var(--color-text);
 }
 
+/* Maak de links in de header wit en zonder streepje */
 header a {
 	color: var(--color-background);
 	text-decoration: none;
 	font-weight: 500;
+	font-size: 0.875rem;
 }
 
+/* Zet alles in de navigatie naast elkaar */
 nav {
 	display: flex;
-	gap: 1rem;
-	padding: 1.5rem;
+	gap: 0.5rem;
+	padding: 1.5rem 1rem;
 	align-items: center;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 
-nav a:first-child {
+/* Zet het logo Uber links, margin-right: auto duwt de rest naar rechts */
+nav > a:first-child {
 	margin-right: auto;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 400;
 }
 
-nav a:last-of-type {
+/* Maak Aanmelden een witte knop met ronde hoeken */
+nav > a:last-of-type {
 	background-color: var(--color-background);
 	color: var(--color-text);
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0.75rem;
 	border-radius: 2rem;
 }
 
+/* Haal de achtergrond en rand van de knoppen in de navigatie weg */
 nav button {
 	background-color: transparent;
 	border: none;
 	color: var(--color-background);
+	padding: 0;
 }
 
+/* Geef de icoontjes in de navigatie een vaste breedte */
 nav svg {
 	width: 1.5rem;
 }
 
+/* Verberg het zonnetje, normaal zie je het maantje */
 nav button:first-of-type svg:last-child {
 	display: none;
 }
 
+/* Verberg het maantje in het donker thema */
 body.donker-thema nav button:first-of-type svg:first-child {
 	display: none;
 }
 
+/* Laat het zonnetje zien in het donker thema */
 body.donker-thema nav button:first-of-type svg:last-child {
 	display: block;
 }
 
+/* Bron: FED Oefening JS 3-stap 2 - Hamburger menu (codepen.io/shooft/pen/qEOpvZK), en Claude (AI) uitleg en hulp */
+/* Menu knop: normaal zie je de streepjes, het kruisje is verborgen */
+  nav button:last-of-type svg:last-child {
+	display: none;
+}
+
+/* Als het menu open is: streepjes verbergen... */
+nav.toonMenu button:last-of-type svg:first-child {
+	display: none;
+}
+
+/* en het kruisje laten zien */
+nav.toonMenu button:last-of-type svg:last-child {
+	display: block;
+}
+
+/* Het menu ligt over het hele scherm, maar staat eerst rechts buiten beeld */
+/* visibility: hidden zorgt dat je er met Tab niet naartoe kunt als het dicht is */
+nav ul {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	translate: 100% 0;
+	visibility: hidden;
+	transition: translate 0.3s, visibility 0.3s;
+	margin: 0;
+	padding: 6rem 1.5rem 1.5rem;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	background-color: var(--color-text);
+}
+
+/* Als de nav de class toonMenu heeft, schuift het menu in beeld */
+nav.toonMenu ul {
+	translate: 0 0;
+	visibility: visible;
+}
+
+/* De menu knop ligt boven het menu, zodat je hem kunt blijven zien en aanklikken */
+nav button:last-of-type {
+	position: relative;
+	z-index: 1;
+}
+
+/* Grote links in het menu */
+nav ul a {
+	font-size: 1.5rem;
+}
+
+/* Zet alle blokken in main onder elkaar met ruimte ertussen */
 main {
 	padding: 1.5rem;
 	display: flex;
@@ -188,6 +283,7 @@ main {
 	gap: 3rem;
 }
 
+/* Laat de knop Stad wijzigen eruitzien als onderstreepte tekst */
 main p button {
 	background-color: transparent;
 	border: none;
@@ -195,16 +291,19 @@ main p button {
 	font: inherit;
 }
 
+/* Geef het icoontje bij Stad wijzigen een kleine breedte */
 main p svg {
 	width: 1rem;
 }
 
+/* Zet de velden van het formulier onder elkaar */
 form {
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
 }
 
+/* Maak de invoervelden grijs met ronde hoeken */
 input {
 	background-color: var(--color-surface);
 	border: none;
@@ -214,10 +313,12 @@ input {
 	color: var(--color-text);
 }
 
+/* Laat een rand zien als je in een invoerveld klikt */
 input:focus {
 	outline: 0.15rem solid var(--color-text);
 }
 
+/* Maak de knop Raadpleeg de prijzen zwart */
 button[type="submit"]{
 	background-color: var(--color-text);
 	color: var(--color-background);
@@ -229,6 +330,7 @@ button[type="submit"]{
 	margin-top: 0.75rem;
 }
 
+/* Zet het icoon en het invoerveld naast elkaar in een grijs vlak */
 form div {
 	display: flex;
 	align-items: center;
@@ -238,79 +340,94 @@ form div {
 	gap: 1rem;
 }
 
+/* Laat het invoerveld alle ruimte nemen die over is */
 form div input {
 	flex-grow: 1;
 	min-width: 0;
-
 }
 
+/* Haal de achtergrond en rand van de knoppen in het formulier weg */
 form div button{
 	background-color: transparent;
 	border: none;
 	color: var(--color-text);
 }
 
+/* Zorg dat de icoontjes in het formulier niet kleiner worden gedrukt */
 form svg {
 	width: 1rem;
 	flex-shrink: 0;
 }
 
+/* Geef het grijze vlak een rand als het invoerveld erin actief is */
+/* Uitleg :has(): MDN */
 form div:has(input:focus) {
 	outline: 0.15rem solid var(--color-text);
 }
 
+/* Haal de eigen rand van het invoerveld weg, anders zie je er twee */
 form div input:focus {
 	outline: none;
 }
 
+/* Zet alles in een article onder elkaar met ruimte ertussen */
 article {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 }
 
+/* Haal de ruimte om de tekst in een article weg */
 article p {
 	margin: 0;
 }
 
+/* Geef de links een grijs streepje eronder */
 article a {
 	text-decoration-color: var(--color-border);
-	text-underline-offset: 0.5rem;
+	text-underline-offset: 0.3rem;
+	line-height: 1.5;
 }
 
+/* Maak het streepje donker als je over de link gaat */
 article a:hover {
 	text-decoration-color: var(--color-text);
 }
 
+/* Zet de kaartjes van Ontdek in 3 kolommen */
 article ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1rem;
+	gap: 0.5rem;
 }
 
+/* Maak van elke link een grijs kaartje met het plaatje boven de tekst */
 article li a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--color-surface);
 	border-radius: 1rem;
-	padding: 1rem;
+	padding: 1rem 0.25rem;
 	text-decoration: none;
 }
 
+/* Geef de plaatjes in de kaartjes een vaste breedte */
 article li img {
 	width: 4rem;
 }
 
+/* Maak de tekst in de kaartjes klein en iets dikker */
 article li p {
 	margin: 0;
 	font-size: 0.875rem;
 	font-weight: 500;
 }
 
+/* Maak Inloggen op je account en twee keer Aan de slag zwarte knoppen */
 article:nth-of-type(3) a:first-of-type,
 article:nth-of-type(7) a:first-of-type,
 article:nth-of-type(8) a:first-of-type {
@@ -323,11 +440,13 @@ article:nth-of-type(8) a:first-of-type {
 	font-weight: 500;
 }
 
+/* Zet de knoppen van Plannen voor later naast elkaar */
 article:nth-of-type(4) {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
+/* Geef de koppen en het formulier van Plannen voor later een eigen regel */
 article:nth-of-type(4) h2,
 article:nth-of-type(4) h3,
 article:nth-of-type(4) h4,
@@ -335,6 +454,7 @@ article:nth-of-type(4) form {
 	width: 100%;
 }
 
+/* Maak de knoppen Uber Reserve en Huren grijs met ronde hoeken */
 article:nth-of-type(4) button[type="button"] {
 	background-color: var(--color-surface);
 	color: var(--color-text);
@@ -345,23 +465,28 @@ article:nth-of-type(4) button[type="button"] {
 	font-weight: 500;
 }
 
+/* Maak Uber Reserve zwart, omdat die gekozen is */
 article:nth-of-type(4) button[type="button"]:first-of-type {
 	background-color: var(--color-text);
 	color: var(--color-background);
 }
 
+/* Maak de knop Raadpleeg de prijzen hier over de hele breedte */
 article:nth-of-type(4) button[type="submit"] {
 	align-self: stretch;
 }
 
+/* Maak de icoontjes bij Voordelen klein */
 article:nth-of-type(5) img {
 	width: 1.5rem;
 }
 
+/* Maak de icoontjes wit in het donker thema, invert draait de kleuren om */
 body.donker-thema article:nth-of-type(5) img {
 	filter: invert(1);
 }
 
+/* Maak de knop Amsterdam zwart met ronde hoeken en icoontjes ernaast */
 article:nth-of-type(6) button {
 	display: flex;
 	align-items: center;
@@ -375,10 +500,13 @@ article:nth-of-type(6) button {
 	font: inherit;
 }
 
+/* Geef de icoontjes in de knop Amsterdam een kleine breedte */
 article:nth-of-type(6) svg {
 	width: 1rem;
 }
 
+/* Uber for Business: twee links naast elkaar */
+/* de div is er alleen voor de styling */
 article:nth-of-type(8) div {
 	display: flex;
 	flex-wrap: wrap;
@@ -386,11 +514,13 @@ article:nth-of-type(8) div {
 	gap: 1.5rem;
 }
 
+/* Geef het blok Het is makkelijker in de apps een grijze achtergrond */
 article:nth-of-type(9) {
 	background-color: var(--color-surface);
 	padding: 1.5rem;
 }
 
+/* Zet het logo, de titel en de pijl van de app kaartjes naast elkaar */
 article:nth-of-type(9) a {
 	display: flex;
 	align-items: center;
@@ -401,19 +531,23 @@ article:nth-of-type(9) a {
 	text-decoration: none;
 }
 
+/* Geef de app logo's een vaste breedte */
 article:nth-of-type(9) img {
 	width: 4rem;
 }
 
+/* Laat de titel alle vrije ruimte nemen, zo komt de pijl helemaal rechts */
 article:nth-of-type(9) h3 {
 	flex-grow: 1;
 	margin: 0;
 }
 
+/* Geef de pijltjes in de app kaartjes een vaste breedte */
 article:nth-of-type(9) svg {
 	width: 1.5rem;
 }
 
+/* Maak de footer een zwart vlak en zet alles onder elkaar */
 footer {
 	background-color: var(--color-text);
 	color: var(--color-background);
@@ -424,16 +558,19 @@ footer {
 	font-size: 0.875rem;
 }
 
+/* Maak de links in de footer wit en zonder streepje */
 footer a {
 	color: var(--color-background);
 	text-decoration: none;
 }
 
+/* Maak de koppen in de footer kleiner */
 footer h2 {
 	font-size: 1.125rem;
 	margin-top: 1.5rem;
 }
 
+/* Zet de lijstjes in de footer onder elkaar, zonder bolletjes */
 footer ul {
 	list-style: none;
 	padding: 0;
@@ -443,21 +580,25 @@ footer ul {
 	gap: 1rem;
 }
 
+/* Geef de icoontjes in de footer een kleine breedte die zacht kan veranderen */
 footer svg {
 	width: 1rem;
 	transition: width 0.2s;
 }
 
+/* Zet de social media icoontjes (5e lijst) naast elkaar */
 footer ul:nth-of-type(5) {
 	flex-direction: row;
 	gap: 2rem;
 	margin-top: 1.5rem;
 }
 
+/* Maak een social media icoontje iets groter als je erover gaat */
 footer ul:nth-of-type(5) a:hover svg {
 	width: 1.25rem;
 }
 
+/* Laat de knoppen Nederlands, Amsterdam en Tekst groter eruitzien als tekst */
 footer button {
 	display: flex;
 	align-items: center;
@@ -471,27 +612,33 @@ footer button {
 	font-weight: 500;
 }
 
+/* Geef de knop Nederlands wat ruimte erboven */
 footer button:first-of-type {
 	margin-top: 1rem;
 }
 
+/* Zet de knop Amsterdam dichter onder Nederlands */
 footer button:nth-of-type(2) {
 	margin-top: -0.75rem;
 }
 
+/* Zet de app logo's (6e lijst) naast elkaar */
 footer ul:nth-of-type(6) {
 	flex-direction: row;
 	gap: 0.75rem;
 }
 
+/* Geef de app logo's in de footer een vaste hoogte */
 footer ul:nth-of-type(6) img {
 	height: 2.5rem;
 }
 
+/* Maak de copyright tekst klein */
 footer p {
 	font-size: 0.75rem;
 }
 
+/* Zet Privacy, Toegankelijkheid en Voorwaarden (7e lijst) naast elkaar */
 footer ul:nth-of-type(7) {
 	flex-direction: row;
 	gap: 1rem;
